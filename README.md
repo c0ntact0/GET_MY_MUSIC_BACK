@@ -15,7 +15,7 @@ If you are using an IDE like the VS Code you can run the script directly from th
 
 ### Running from the command line
 * Open a terminal on Mac/Linux or a command shell in Windows
-* Use de cd command to go to the script directory
+* Use de cd command and go to the script directory
 * Run the script
 
 ```
