@@ -37,4 +37,5 @@ There are two json files that are created in the script directory:
 # Other uses
 The script was created to solve my problem, related with my car music collection, but can be used for other type of files. Just change the MIMES variable to accomplish that.
 
+Rui Loureiro (2025)
 </div>
