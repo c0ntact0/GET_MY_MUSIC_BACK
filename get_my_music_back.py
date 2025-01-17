@@ -3,13 +3,21 @@ import json
 import shutil
 from pprint import pprint
 
-# Your old music location. This is a list just because uses the same function as SOURCE_LOCATIONS to retrive files
-OLD_LOCATION=["/Volumes/SKODA/Albums"]
-NEW_LOCATION="/Volumes/OCTAVIA" # Your new music location
+# ------------ begin of configuration ------------
+
+# Your old music location.
+OLD_LOCATION="Some path"
+# Your new music location
+NEW_LOCATION="Some path"
 # Your source music locations. Can be more than one, if you have music in more than one location.
-SOURCE_LOCATIONS=["/Volumes/Multimedia/Music/Albums","/Volumes/Multimedia/Music/luis_avelar","/Volumes/Multimedia/Music/singles"]
+SOURCE_LOCATIONS=["Some path","Some other path","One more path"]
+# Types of files to copy
 MIMES=[".mp3",".wma"]
+
+# -------------- End of configuration ------------
+
 SCRIPT_PATH = os.path.dirname(__file__)
+OLD_LOCATION_LIST= [OLD_LOCATION]
 OLD_JSON = os.path.join(SCRIPT_PATH,"old_files.json")
 SOURCE_JSON = os.path.join(SCRIPT_PATH,"source_files.json")
 
@@ -36,7 +44,7 @@ def get_files(folders:list,json_file:str):
     return source_files
 
 source_files = get_files(SOURCE_LOCATIONS,SOURCE_JSON)
-old_files = get_files(OLD_LOCATION,OLD_JSON)
+old_files = get_files(OLD_LOCATION_LIST,OLD_JSON)
 print("Do you start the copy now? Files already in the destination will not be copied.")
 resp = input("Write \"no\" to stop or nothing to start: ")
 if resp.lower() == "no":
